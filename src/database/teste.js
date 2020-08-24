@@ -1,0 +1,1 @@
+console.log(fetch('https://http://brf-app-hrplatformapi-qas.azurewebsites.net/api/CSC/GetIRPF?userId=598761&apiKey=98a0011d-1f35-46a1-9259-46f3fae601f4'))
