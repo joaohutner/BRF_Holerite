@@ -6,9 +6,7 @@ const nunjucks = require('nunjucks')
 //importando de pages.js
 const {
     pageLanding,
-    pageStudy,
-    pageGiveClasses,
-    saveClasses
+    pageGiveClasses
 } = require('./pages')
 
 //configurar nunjucks, usaremos ele para enviar os arquivos.
@@ -25,8 +23,6 @@ server
 .use(express.static("public")) /*Tudo aqui dentro é uma configuração do servidor */
 // rotas da aplicação
 .get("/", pageLanding)
-.get("/study", pageStudy)
 .get("/give_classes", pageGiveClasses)
-.post("/save_classes", saveClasses)
 /*Esse parametro vai iniciar nosso server na porta que está dentro de listen */
 .listen(5500)
