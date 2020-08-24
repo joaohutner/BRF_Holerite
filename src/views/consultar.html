@@ -53,7 +53,7 @@
             if (response.ok){
                 let myJson = await response.json(); 
                 console.log(myJson);
-                let myJson2 = JSON.parse(myJson);
+                let myJson2 = JSON.stringify(myJson);
                 document.getElementById("post").innerHTML=myJson2;
             }else{
                 alert("HTTP-Error: " + response.status);
