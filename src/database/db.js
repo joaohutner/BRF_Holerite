@@ -1,6 +1,19 @@
 //Atribuindo a variável para o banco de dados, basicamente é o import do Python
 const Database = require('sqlite-async')
 
+function UserAction() {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+         if (this.readyState == 4 && this.status == 200) {
+             alert(this.responseText);
+         }
+    };
+    xhttp.open("POST", "Your Rest URL Here", true);
+    xhttp.setRequestHeader("Content-type", "application/json");
+    xhttp.send("Your JSON Data Here");
+}
+
+
 function create(db){
     //Aqui dentro colocaremos funções SQL para execução
     //Criar as tabelas do banco de dados
