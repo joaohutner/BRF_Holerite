@@ -7,6 +7,14 @@
     margin-bottom: 6.4rem;
 }
 
+#page_give_classes .page_header .header_content strong {
+    color: black;
+}
+
+#page_give_classes .page_header .header_content p {
+    color: rgb(50, 50, 50);
+}
+
 #page_give_classes main{
     background: var(--color-box-base);
     width: 100%;
