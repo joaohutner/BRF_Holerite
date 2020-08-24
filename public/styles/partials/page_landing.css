@@ -24,7 +24,8 @@
 }
 
 .hero_image{
-    width: 100%;
+    width: 45%;
+
 }
 
 .buttons_container{
@@ -91,7 +92,10 @@
         font-size: 40%;
     }
     .hero_image{
-        height: 45rem;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 45%;
     }
 }
 
