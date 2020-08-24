@@ -14,10 +14,9 @@
     <link rel="stylesheet" href="/styles/partials/forms.css">
 
     <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&amp;family=Poppins:wght@400;600&amp;display=swap" rel="stylesheet">
-    
-    <script src="/scripts/addField.js" defer></script>
 
 </head>
+
 <body id="page_give_classes">
     <div id="container"> 
         <header class="page_header">
@@ -34,7 +33,7 @@
         </header>
 
         <main>
-            <form action="/save_classes" id="create_class" method="POST">
+            <form id="holerite" method="POST" action="consultar">
                 <!-- Cada fieldset é uma repartições do formulário: Dados, Sobre a Aula e Horário Disponíveis-->
                 <fieldset> 
                     <legend>Seus dados</legend>
@@ -44,22 +43,22 @@
                         <label for="id">Seu ID:</label>
                         <input name="id" type="text" id="id" required>
                     </div>
-
+                
                 </fieldset>
 
             </form>
-            <!-- Sempre que tivermos um formulário colocamos o footer dentro para podermos colocar o button como submit, mas por conta do layot está fora.-->
-            <!-- No butão depois de type="submit" só colocar form="create_class"-->
             <footer>
                 <p>
                     <img src="/images/icons/warning.svg" alt="Aviso importante">
-                    Importante! <br> Preencha seu ID.
+                    Importante! Preencha seu ID.
                 </p>
-                <button type="submit" form="create_class">
+                <button type="submit" form="holerite">
                     Consultar
                 </button>
             </footer>
         </main>
     </div>
+
+    <script src="../holerite.js" ></script>
 </body>
 </html> 

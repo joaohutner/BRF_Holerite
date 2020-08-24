@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt_br"> 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>BRF | Holerite online</title>
+
+    <meta name="theme-color" content="#8257E5"> <!-- Icone em cima da página-->
+    <link rel="shortcut icon" href="/images/favicon.png" type="image/png">
+
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="/styles/partials/header.css">
+    <link rel="stylesheet" href="/styles/partials/page_give_classes.css">
+    <link rel="stylesheet" href="/styles/partials/forms.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&amp;family=Poppins:wght@400;600&amp;display=swap" rel="stylesheet">
+
+</head>
+<body id="page_give_classes">
+    <div id="container"> 
+        <header class="page_header">
+            <div class="top_bar_container">
+                <a href="/">
+                    <img src="/images/icons/back.svg" alt="Voltar">
+                </a>
+            </div>
+
+            <div class="header_content">
+                <strong>Holerite</strong>
+            </div>
+
+        </header>
+
+        <main>
+            <h1>
+                Esse é o seu holerite
+            </h1>
+            <p id="post">
+            </p>
+        </main>
+    </div>
+    <script>
+        window.onload = async function() {
+            const api_url = 'http://brf-app-hrplatformapi-qas.azurewebsites.net/api/CSC/GetIRPF?userId=598761';
+            
+            var myInit = { 
+                method: 'GET',
+                headers: {"apiKey": "98a0011d-1f35-46a1-9259-46f3fae601f4"},
+                };
+
+            const response = await fetch(api_url,myInit)
+
+            if (response.ok){
+                let myJson = await response.json(); 
+                console.log(myJson);
+                let myJson2 = JSON.parse(myJson);
+                document.getElementById("post").innerHTML=myJson2;
+            }else{
+                alert("HTTP-Error: " + response.status);
+            }
+        };
+    </script>
+</body>
+</html> 

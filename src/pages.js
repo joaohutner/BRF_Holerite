@@ -3,10 +3,15 @@ function pageLanding(req, res){
 }
 
 function pageGiveClasses(req,res){
-    return res.render("give_classes.html")
+    return res.render("gerar.html")
+}
+
+function pageConsultar(req,res){
+    return res.render("consultar.html")
 }
 
 module.exports = {
     pageLanding,
-    pageGiveClasses
+    pageGiveClasses,
+    pageConsultar
 }
